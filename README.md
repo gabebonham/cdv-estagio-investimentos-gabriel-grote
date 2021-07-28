@@ -52,6 +52,7 @@ Backend:
 * Chamada GET de api que retorna a lista de clientes e suas etapas em formato JSON.
 * Chamada PUT de api que atualiza a etapa de um cliente
 * Chamada POST de api que cria um novo cliente
+* Caso ache relevante ou necessário, crie outras chamadas de API.
 
 
 ## O que será avaliado ##
