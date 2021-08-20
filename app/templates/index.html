@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+
+{% block body %} 
+<div style='text-align: center;'>
+    <div style='margin: 10px'>
+    <a href='/add' style='background-color: rgb(252, 255, 86); border: none; border-radius: 10px; padding: 5px; margin: 10px; text-decoration: none; color: black'>Adicionar cliente</a>
+    </div>
+    <table style='margin-left:auto; margin-right: auto'>
+        <tr>
+            <th style='border: 2px solid black; padding: 10px'>Nome</th>
+            <th style='border: 2px solid black; padding: 10px'>CPF</th>
+            <th style='border: 2px solid black; padding: 10px'>Etapa atual</th>
+            <th style='border: 2px solid black; padding: 10px'>Opções</th>
+        </tr>
+        {% for client in clients %}
+        <tr>
+            <td style='border: 2px solid black; padding: 10px'>{{ client.name }}</td>
+            <td style='border: 2px solid black; padding: 10px'>{{ client.CPF }}</td>
+            <td style='border: 2px solid black; padding: 10px'>{{ client.etapaAtual }}</td>
+            <td style='border: 2px solid black; padding: 10px'>
+                <a href='/delete/{{ client.id }}' style='background-color: rgb(255, 75, 75); border: none; border-radius: 10px; padding: 3px; text-decoration: none; color: black'>Deletar</a>
+                <a href='/update/{{ client.id }}' style='background-color: rgb(82, 82, 255); border: none; border-radius: 10px; padding: 3px; text-decoration: none; color: black'>Editar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

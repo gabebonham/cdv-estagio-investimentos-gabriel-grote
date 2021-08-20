@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+
+{% block body %} 
+<h3 style='text-align: center;'>Editar Cliente</h3>
+<div style='text-align: center;'>
+    <div style='margin: 10px'>
+        <a href='/' style='background-color: rgb(86, 103, 255); border: none; border-radius: 10px; padding: 5px; text-decoration: none; color: black'>Voltar</a>
+    </div>
+        <form action='/update/{{ client.id }}' method='POST'>
+            <label>nome: </label><input type='text' name='name' id='name' value='{{ client.name }}'/>
+            <label>CPF: </label><input type='text' name='CPF' id='CPF' value='{{ client.CPF }}'/>
+            <label>Etapa atual: </label><input type='text' name='etapaAtual' id='etapaAtual' value='{{ client.etapaAtual }}'/>
+            <br/>
+            <div style='margin: 10px'>
+                <input style='background-color: rgb(86, 111, 255); border: none; border-radius: 10px; padding: 5px; text-decoration: none; color: black' type='submit' value='Editar cliente'/>
+            </div>
+        </form>
+</div>
+{% endblock %}

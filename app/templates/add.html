@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+
+{% block body %} 
+<div style='text-align: center;'>
+    <div style='margin: 10px'>
+        <a href='/' style='background-color: rgb(86, 103, 255); border: none; border-radius: 10px; padding: 5px; text-decoration: none; color: black'>Voltar</a>
+    </div>
+        <form action='/add' method='POST'>
+            <label>nome: </label><input type='text' name='name' id='name'/>
+            <label>CPF: </label><input type='text' name='CPF' id='CPF'/>
+            <label>Etapa atual: </label><input type='text' name='etapaAtual' id='etapaAtual'/>
+            <br/>
+            <div style='margin: 10px'>
+                <input style='background-color: rgb(252, 255, 86); border: none; border-radius: 10px; padding: 5px; text-decoration: none; color: black' type='submit' value='Adicionar cliente'/>
+            </div>
+        </form>
+</div>
+{% endblock %}
