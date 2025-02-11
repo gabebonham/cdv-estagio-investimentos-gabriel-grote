@@ -2,7 +2,8 @@ from app import app, db
 from flask import render_template, request, redirect, url_for
 
 from app.models.UsersTable import User
-
+with app.app_context():
+    db.create_all()
 @app.route('/', methods=['GET'])
 def index():
     clients = User.query.order_by(User.id).all()
